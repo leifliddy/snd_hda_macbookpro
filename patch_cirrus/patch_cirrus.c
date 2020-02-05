@@ -1341,7 +1341,7 @@ enum {
 };
 
 
-static void cs_8409_pcm_playback_pre_prepare_hook(struct hda_pcm_stream *hinfo, struct hda_codec *codec, 
+static void cs_8409_pcm_playback_pre_prepare_hook(struct hda_pcm_stream *hinfo, struct hda_codec *codec,
                                unsigned int stream_tag, unsigned int format, struct snd_pcm_substream *substream,
                                int action);
 
@@ -1659,7 +1659,7 @@ void cs_8409_jack_unsol_event(struct hda_codec *codec, unsigned int res)
 
         dev_info(hda_codec_dev(codec), "cs_8409_jack_unsol_event UNSOL 0x%08x tag 0x%02x\n",res,tag);
 
-        event = snd_hda_jack_tbl_get_from_tag(codec, tag);
+        event = snd_hda_jack_tbl_get_from_tag(codec, tag, 0);
         if (!event)
                 return;
         event->jack_dirty = 1;
