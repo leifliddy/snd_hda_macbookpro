@@ -1,26 +1,4 @@
 # snd_hda_macbookpro
 
-Compiling and installing driver:
--------------
-
-**fedora package install**
-```
-dnf install wget make gcc kernel-devel
-```
-**ubuntu package install**  
-```
-apt install wget make gcc linux-headers-generic
-```
-**arch package install**
-```
-pacman -S wget make gcc linux-headers
-```
-
-**build driver**  
-```
-git clone https://github.com/leifliddy/snd_hda_macbookpro.git
-cd snd_hda_macbookpro/
-#run the following command as root or with sudo
-./install.cirrus.driver.sh
-reboot
-```
+there's no need for this project to exist any longer as the original developer davidjo as now included an installer script
+https://github.com/davidjo/snd_hda_macbookpro
